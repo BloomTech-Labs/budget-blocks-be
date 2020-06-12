@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1591914994705" clover="3.2.0">
-  <project timestamp="1591914994705" name="All files">
-    <metrics statements="122" coveredstatements="56" conditionals="14" coveredconditionals="4" methods="37" coveredmethods="2" elements="173" coveredelements="62" complexity="0" loc="122" ncloc="122" packages="5" files="11" classes="11"/>
+<coverage generated="1591919904817" clover="3.2.0">
+  <project timestamp="1591919904817" name="All files">
+    <metrics statements="122" coveredstatements="75" conditionals="14" coveredconditionals="6" methods="37" coveredmethods="14" elements="173" coveredelements="95" complexity="0" loc="122" ncloc="122" packages="5" files="11" classes="11"/>
     <package name="budget-blocks-be">
       <metrics statements="25" coveredstatements="20" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.js" path="C:\Users\eddie\Desktop\LABS\budget-blocks-be\index.js">
@@ -40,46 +40,46 @@
       </file>
     </package>
     <package name="budget-blocks-be.okta">
-      <metrics statements="42" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="20" coveredmethods="0"/>
+      <metrics statements="42" coveredstatements="30" conditionals="2" coveredconditionals="2" methods="20" coveredmethods="12"/>
       <file name="okta-model.js" path="C:\Users\eddie\Desktop\LABS\budget-blocks-be\okta\okta-model.js">
-        <metrics statements="9" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
       </file>
       <file name="okta-router.js" path="C:\Users\eddie\Desktop\LABS\budget-blocks-be\okta\okta-router.js">
-        <metrics statements="33" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <metrics statements="33" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="14" coveredmethods="7"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="38" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="61" count="2" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
         <line num="75" count="2" type="stmt"/>
         <line num="76" count="0" type="stmt"/>
@@ -91,9 +91,9 @@
       </file>
     </package>
     <package name="budget-blocks-be.okta.middleware">
-      <metrics statements="16" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
+      <metrics statements="16" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
       <file name="require_authentication.js" path="C:\Users\eddie\Desktop\LABS\budget-blocks-be\okta\middleware\require_authentication.js">
-        <metrics statements="16" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
+        <metrics statements="16" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -107,9 +107,9 @@
         <line num="23" count="10" type="stmt"/>
         <line num="24" count="10" type="stmt"/>
         <line num="26" count="10" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="33" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
       </file>
     </package>
     <package name="budget-blocks-be.onboarding.budget">
