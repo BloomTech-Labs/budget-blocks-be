@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const plaidRouter = require('./plaid/plaidRouter');
 const oktaRouter = require('./okta/okta-router');
 const incomeRouter = require('./onboarding/income/incomeRouter');
+const budgetRouter = require('./onboarding/budget/budgetRouter');
 
 // Server initialization
 const knex = require('./data/db-config');
@@ -22,6 +23,7 @@ server.use(morgan('dev'));
 server.use('/plaid', plaidRouter);
 server.use('/api', oktaRouter);
 server.use('/api', incomeRouter);
+server.use('/api', budgetRouter);
 
 server.use('/', (req, res) => {
   res.send({ message: 'API is up and running...' });
