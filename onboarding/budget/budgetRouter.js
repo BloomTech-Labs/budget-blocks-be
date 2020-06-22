@@ -6,7 +6,7 @@ const requireAuthentication = require('../../okta/middleware/require_authenticat
 
 const router = express.Router();
 
-router.get('/goals', requireAuthentication, (req, res) => {
+router.get('/goals', (req, res) => {
   Budget.findAll()
     .then((budgets) => {
       if (budgets.length !== 0) {
@@ -20,30 +20,30 @@ router.get('/goals', requireAuthentication, (req, res) => {
     });
 });
 
-router.get(
-  '/goals/:id',
-  requireAuthentication,
-  validateBudgetId,
-  (req, res) => {
-    const { budget } = req;
-    res.json(budget);
-  }
-);
+router.get('/goals/:user_id', (req, res) => {
+  const { user_id } = req.params;
 
-router.post('/goals', requireAuthentication, (req, res) => {
+  Budget.findById(user_id)
+  .then(budget => {
+      if(budget.id >= 0){
+          return res.status(200).json(budget)
+      } else {
+          return res.status(404).json({ message: 'Error id invalid' })
+      }
+  })
+  .catch(() => {
+      res.status(500).json({ message: 'Error Retrieving Item' })
+  })
+})
+
+router.post('/goals', (req, res) => {
   const { body } = req;
   if (!body.user_id) {
     return res.status(400).json({ message: 'Must send user_id property' });
   }
   Budget.add(body)
     .then((budget) => {
-      if (budget) {
-        res.json(budget);
-      } else {
-        res
-          .status(400)
-          .json({ message: 'There was an error adding the budget goal' });
-      }
+        res.status(200).json(budget);
     })
     .catch((err) => {
       res.status(500).json({ message: 'server error', error: err.message });
@@ -51,14 +51,12 @@ router.post('/goals', requireAuthentication, (req, res) => {
 });
 
 router.put(
-  '/goals/:id',
-  requireAuthentication,
-  validateBudgetId,
+  '/goals/:user_id',
   (req, res) => {
-    const { id } = req.params;
+    const { user_id } = req.params;
     const { body } = req;
 
-    Budget.update(body, id)
+    Budget.update(body, user_id)
       .then((count) => {
         res.json(count[0]);
       })

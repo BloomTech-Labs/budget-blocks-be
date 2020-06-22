@@ -117,6 +117,31 @@ router.get("/userTransactions/:userId", (req, res) => {
   }
 });
 
+router.get("/userBalance/:userId", (req, res) => {
+  const user_id = req.params.userId;
+
+  try {
+    db.findTokensByUserId(user_id)
+      .then(accessToken => {
+        client.getBalance(
+          accessToken[0].access_token, 
+          function (error, balanceResponse) {
+            if (error != null) {
+              return res.status(500).json({
+                error: error
+              });
+            } else {
+              res.status(200).json({ BalanceResponse: balanceResponse, user_id: user_id })
+            }
+          }
+        )
+      }
+      )
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // SECTION GET
 // Find Access Token By userId
 router.get("/accessToken/:userId", (req, res) => {

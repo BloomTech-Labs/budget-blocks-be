@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class='wrapper'>
         <div class='pad1'>
             <h1><a href="../../index.html">All files</a> / <a href="index.html">budget-blocks-be/okta</a> okta-model.js
@@ -50,14 +51,55 @@
                 </div>
 
 
+=======
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">budget-blocks-be/okta</a> okta-model.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">22.22% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>2/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">22.22% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>2/9</span>
+>>>>>>> 168431e8eea68e870ae8ebbe3ac907483f09d056
             </div>
             <p class="quiet">
                 Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em>
                 for the previous block.
             </p>
         </div>
+<<<<<<< HEAD
         <div class='status-line high'></div>
         <pre><table class="coverage">
+=======
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+>>>>>>> 168431e8eea68e870ae8ebbe3ac907483f09d056
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -112,28 +154,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,29 +195,29 @@ module.exports = {
 };
 &nbsp;
 // NOTE Save
-function findUserByEmail(email) {
-  return db('users').where({ email }).first();
+function <span class="fstat-no" title="function not covered" >findUserByEmail(</span>email) {
+<span class="cstat-no" title="statement not covered" >  return db('users').where({ email }).first();</span>
 }
 &nbsp;
 // NOTE Save
-function addUser(userInfo) {
-  return db('users')
+function <span class="fstat-no" title="function not covered" >addUser(</span>userInfo) {
+<span class="cstat-no" title="statement not covered" >  return db('users')</span>
     .insert(userInfo, 'email')
-    .then((emails) =&gt; {
-      [email] = emails;
+    .then(<span class="fstat-no" title="function not covered" >(e</span>mails) =&gt; {
+<span class="cstat-no" title="statement not covered" >      [email] = emails;</span>
 &nbsp;
-      return findUserByEmail(email);
+<span class="cstat-no" title="statement not covered" >      return findUserByEmail(email);</span>
     });
 }
 &nbsp;
 // NOTE Save
-function deleteUser(email) {
-  return db('users').where({ email }).del();
+function <span class="fstat-no" title="function not covered" >deleteUser(</span>email) {
+<span class="cstat-no" title="statement not covered" >  return db('users').where({ email }).del();</span>
 }
 &nbsp;
 // NOTE Test Helper Fxn (delete later)
-function findAllUsers() {
-  return db('users');
+function <span class="fstat-no" title="function not covered" >findAllUsers(</span>) {
+<span class="cstat-no" title="statement not covered" >  return db('users');</span>
 }
 &nbsp;
 function <span class="fstat-no" title="function not covered" >updateUser(</span>city, state, onboarding_complete, userId) {
@@ -190,6 +232,7 @@ function <span class="fstat-no" title="function not covered" >updateUser(</span>
         </table>
         </pre>
 
+<<<<<<< HEAD
         <div class='push'></div><!-- for sticky footer -->
     </div><!-- /wrapper -->
     <div class='footer quiet pad2 space-top1 center small'>
@@ -209,3 +252,24 @@ function <span class="fstat-no" title="function not covered" >updateUser(</span>
 </body>
 
 </html>
+=======
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Fri Jun 12 2020 12:57:09 GMT-0400 (Eastern Daylight Time)
+            </div>
+        </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
+>>>>>>> 168431e8eea68e870ae8ebbe3ac907483f09d056

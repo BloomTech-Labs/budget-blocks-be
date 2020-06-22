@@ -12,8 +12,8 @@ function findAll() {
   return db('budget_goals');
 }
 
-function findById(id) {
-  return db('budget_goals').where({ id }).first();
+function findById(user_id) {
+  return db('budget_goals').where({ user_id }).first();
 }
 
 function add(data) {
@@ -24,8 +24,8 @@ function add(data) {
     });
 }
 
-function update(changes, id) {
-  return db('budget_goals').update(changes).where({ id }).returning('*');
+function update(changes, user_id) {
+  return db('budget_goals').update(changes).where({ user_id }).returning('*');
 }
 
 function remove(id) {
