@@ -109,7 +109,9 @@ router.get("/userTransactions/:userId", (req, res) => {
           }
         )
       }
-      )
+      ).catch(err => {
+        console.log(err.message);
+      })
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
